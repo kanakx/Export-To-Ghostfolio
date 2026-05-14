@@ -37,6 +37,10 @@ dist/**/*
 # Allow sample export files
 !samples/*-export.csv
 
+# Local inputs and outputs
+io/input/.
+io/output/.
+
 # Ignore Trading 212 export files (by default name: from_date_to_date_acc.csv)
 from_*.csv
 

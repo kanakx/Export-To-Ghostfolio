@@ -29,6 +29,7 @@ import { RelaiConverter } from "./converters/relaiConverter";
 import { RevolutConverter } from "./converters/revolutConverter";
 import { SaxoConverter } from "./converters/saxoConverter";
 import { SchwabConverter } from "./converters/schwabConverter";
+import { StrikeConverter } from "./converters/strikeConverter";
 import { SwissquoteConverter } from "./converters/swissquoteConverter";
 import { TradeRepublicConverter } from "./converters/tradeRepublicConverter";
 import { Trading212Converter } from "./converters/trading212Converter";
@@ -214,6 +215,10 @@ async function createConverter(converterType: string, securityService?: Security
         case "schwab":
             console.log("[i] Processing file using Schwab converter");
             converter = new SchwabConverter(securityService);
+            break;
+        case "strike":
+            console.log("[i] Processing file using Strike converter");
+            converter = new StrikeConverter(securityService);
             break;
         case "sq":
         case "swissquote":
